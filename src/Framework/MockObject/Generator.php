@@ -1189,7 +1189,7 @@ class PHPUnit_Framework_MockObject_Generator
             if (!$forCall) {
                 if ($this->hasType($parameter) && (string) $parameter->getType() !== 'self') {
                     if (version_compare(PHP_VERSION, '7.1', '>=') && $parameter->allowsNull() && !$parameter->isVariadic()) {
-                        $nullable = '?';
+                        $nullable = '';
                     }
 
                     $typeDeclaration = (string) $parameter->getType() . ' ';
